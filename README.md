@@ -3,6 +3,7 @@
 ## Due 02-01-2016
 
 ## Author
+Tim Keranen
 
 ## Description
 
@@ -55,5 +56,6 @@ Suggestion/Hints:
 ## Outside Resources Used
 
 ## Known Problems, Issues, And/Or Errors in the Program
+I mostly had trouble moving around the array, and I couldn't make proper search or add options.
 
 
