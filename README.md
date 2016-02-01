@@ -57,5 +57,6 @@ Suggestion/Hints:
 
 ## Known Problems, Issues, And/Or Errors in the Program
 I mostly had trouble moving around the array, and I couldn't make proper search or add options.
+Also had to put the CSV file into the bin folder to make the program read it. Not sure if I was supposed to do that or not.
 
 
