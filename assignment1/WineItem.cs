@@ -8,10 +8,12 @@ namespace assignment1
 {
     class WineItem
     {
+        // Create fields for arrays.
         private int id;
         private string description;
         private string pack;
 
+        // Set properties for fields.
         public int ID
         {
             get { return id; }
@@ -28,6 +30,7 @@ namespace assignment1
             set { pack = value; }
         }
 
+        // Three parameter constructor.
         public WineItem(int id, string description, string pack)
         {
             this.id = id;
@@ -35,6 +38,7 @@ namespace assignment1
             this.pack = pack;
         }
 
+        // Override method.
         public override string ToString()
         {
             return this.id.ToString() + " " + this.description + " " + this.pack;

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.IO;
+using System.IO; // Required for Streamreader.
 
 namespace assignment1
 {
     class CSVProcessor
     {
-
+        // Public method created to read CSV file.
         public bool AccessCSVFile(string wineListCSV, WineItem[] wine)
         {
             StreamReader wineItemStreamReader = null;
@@ -49,6 +49,7 @@ namespace assignment1
             return false;
         }
 
+        // Private method created to assign values to array.
         private void compileList(string wineList, WineItem[] wine, int index)
         {
             string[] collumns = wineList.Split(',');

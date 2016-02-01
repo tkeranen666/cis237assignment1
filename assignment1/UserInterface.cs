@@ -10,9 +10,12 @@ namespace assignment1
     {
         public int RecieveInput()
         {
+            // Call method for interface menu.
             this.UserMenu();
             String userChoice = Console.ReadLine();
 
+            // This loop checks to make sure user enters a valid choice and displays
+           // an error messege if not.
             while (userChoice != "1" && userChoice != "2" && userChoice != "3" &&
                    userChoice != "4" && userChoice != "5")
             {
@@ -28,6 +31,7 @@ namespace assignment1
             return Int32.Parse(userChoice);
         }
 
+        // Private Method for displaying interface menu.
         private void UserMenu()
         {
             Console.WriteLine("What would you like to do?");
