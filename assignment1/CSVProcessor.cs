@@ -31,9 +31,11 @@ namespace assignment1
                 return true;
             }
 
-            catch (Exception)
+            catch (Exception e)
             {
                 Console.WriteLine("Error! Unable to load file.");
+                Console.WriteLine(e.ToString());
+                Console.WriteLine(e.StackTrace);
             }
 
             finally

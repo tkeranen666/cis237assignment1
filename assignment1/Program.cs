@@ -16,24 +16,44 @@ namespace assignment1
     {
         static void Main(string[] args)
         {
+            // Call UserInterface class to build menu and recieve user input
+            UserInterface newUser = new UserInterface();
+            String input = Console.ReadLine();
 
-            Console.WriteLine("Hello new user.");
-            Console.WriteLine("Please type your name:");
+            int choice = newUser.RecieveInput();
 
-            string userInputString = Console.ReadLine();
+            WineItemCollection wineItemCollection = new WineItemCollection();
 
-            Console.WriteLine("Hello " + userInputString + ".");
+            while (choice != 5)
+            {
+                if (choice == 1)
+                {
+                    wineItemCollection.Collection();
+                    Console.WriteLine();
+                    Console.WriteLine("Done.");
+                }
+                else if (choice == 2)
+                {
+                    wineItemCollection.Print();
+                }
+                else if (choice == 3)
+                {
+                    Console.WriteLine("Enter the item you wish to search for:");
+                    wineItemCollection.SearchList();
+                }
+                else if (choice == 4)
+                {
+                    Console.WriteLine("Enter the item you wish to add:");
+                    wineItemCollection.AddItem();
+                }
+                else if (choice == 5)
+                {
+                    Console.WriteLine("Have a nice day.");
+                }
+                input = Console.ReadLine();
+                choice = newUser.RecieveInput();
+            }
 
-
-
-            WineItem[] wineItems = new WineItem[3964];
-
-            CSVProcessor wineList = new CSVProcessor();
-
-            wineList.AccessCSVFile("../datafiles/WineList.CSV", wineItems);
-
-
-        
         }
     }
 }
